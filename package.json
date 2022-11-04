@@ -1,0 +1,36 @@
+{
+  "name": "rest-api-automation",
+  "version": "1.0.0",
+  "description": "REST API Testing Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './{,!(node_module)/**}/*.test.js'",
+    "test:usersApi": "mocha './test/usersApi/**/*.test.js",
+    "test:misc": "mocha './test/utils/**/*.test.js'",
+    "test:github": "mocha './test/githubApi/*.test.js",
+    "debug": "SET NODE_DEBUG=request&&npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ascend777/rest-api-automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ascend777/rest-api-automation/issues"
+  },
+  "homepage": "https://github.com/Ascend777/rest-api-automation#readme",
+  "dependencies": {
+    "@faker-js/faker": "^5.5.3",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.3",
+    "faker": "^5.5.3",
+    "guard": "^0.1.2",
+    "mocha": "^10.1.0",
+    "moment": "^2.29.4",
+    "request-promise": "^4.2.6"
+  },
+  "mocha": {
+    "timeout": 10000
+  }
+}
